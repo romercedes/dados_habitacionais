@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Previsão de Empréstimo</title>
+    <title>Previsão de tipo de empreendimento</title>
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -13,22 +13,6 @@
                 var txt_origem_contrato = $("#txt_origem_contrato").val();
                 var txt_modalidade_programa = $("#txt_modalidade_programa").val();
                 var txt_faixa_grupo_renda = $("#txt_faixa_grupo_renda").val();
-
-                // Enviar os dados para o servidor
-                $.ajax({
-                    type: "POST",
-                    url: "previsao_empreendimento.py",
-                    data: {
-                        txt_uf: txt_uf,
-                        txt_origem_contrato: txt_origem_contrato,
-                        txt_modalidade_programa: txt_modalidade_programa,
-                        txt_faixa_grupo_renda: txt_faixa_grupo_renda
-                    },
-                    success: function(result) {
-                        // Exibir o resultado
-                        $("#resultado").text(result);
-                    }
-                });
             }
 
             // Associar o evento de clique ao botão de previsão
